@@ -1,227 +1,615 @@
+```css
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: Arial, sans-serif;
+}
 
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" type="text/css" href="style.css">
-        <link rel="icon" href="img/icon.png">
-        <title>AUSTERO/PORTFOLIO</title>
-    </head>
+body {
+    background: #FFF0F4;
+    color: #40252B;
+}
 
-    <body>
+.container {
+    width: 85%;
+    max-width: 1100px;
+    margin: auto;
+}
 
-        <header>
-            <div class="container">
-                <div class="nav">
+section {
+    padding: 100px 0;
+}
 
-                    <div class="logo">
-                        <img src="img/logo.png" alt="logo">
-                    </div>
+header {
+    width: 100%;
+    background: #702D45;
+    padding: 15px 7%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    box-shadow: 0 3px 15px rgba(64, 37, 43, 0.2);
+}
 
-                    <button class="burger" id="burger">≡</button>
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 
-                    <ul class="menu" id="menu">
-                        <li><a href="#home">HOME</a></li>
-                        <li><a href="#about">ABOUT</a></li>
-                        <li><a href="#skills">SKILLS</a></li>
-                        <li><a href="#projects">PROJECTS</a></li>
-                        <li><a href="#contact" class="button">Contact Us</a></li>
-                    </ul>
+.logo img {
+    width: 55px;
+    height: 55px;
+    object-fit: contain;
+}
 
-                </div>
-            </div>
-        </header>
+.menu {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    list-style: none;
+}
 
-        <section id="home">
-            <div class="container">
-                <div class="home">
+.menu li a {
+    color: #FFF0F4;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: bold;
+    transition: 0.3s;
+}
 
-                    <div class="home-text">
-                        <h3>Hello, Welcome to my Portfolio!</h3>
+.menu li a:hover {
+    color: #D99A9C;
+}
 
-                        <h1>I'm <span>Jice Alshane C. Austero</span></h1>
+.menu li a.button {
+    background: #D99A9C;
+    color: #40252B;
+    padding: 12px 22px;
+    border-radius: 25px;
+}
 
-                        <h2>Future Software Engineering</h2>
+.menu li a.button:hover {
+    background: #FFF0F4;
+    color: #702D45;
+}
 
-                        <p>
-                            I am a student who loves technology,
-                            programming, and creativity. I enjoy
-                            learning new things and improving
-                            my skills to achieve my dreams.
-                        </p>
+.burger {
+    display: none;
+    background: none;
+    border: none;
+    color: #FFF0F4;
+    font-size: 30px;
+    cursor: pointer;
+}
 
-                        <a href="#about" class="button">About Me</a>
-                    </div>
+#home {
+    min-height: 100vh;
+    padding: 130px 7% 80px;
+    display: flex;
+    align-items: center;
+    background: linear-gradient(135deg, #FFF0F4, #F8DDE5);
+}
 
-                    <div class="hero">
-                        <img src="img/hero.jpg" alt="hero">
-                    </div>
+.home {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+}
 
-                </div>
-            </div>
-        </section>
+.home-text {
+    flex: 1;
+}
 
-        <section id="about">
-            <div class="container">
+.home-text h3 {
+    color: #A6536B;
+    font-size: 18px;
+    margin-bottom: 15px;
+}
 
-                <h1 class="title">ABOUT <span>ME</span></h1>
+.home-text h1 {
+    color: #702D45;
+    font-size: 42px;
+    margin-bottom: 15px;
+}
 
-                <div class="about">
-                    <p>
-                        Hi! My name is Jice Alshane C. Austero.
-                        I am a student taking Diploma in Software
-                        Engineering Technology.
+.home-text h1 span {
+    color: #A6536B;
+}
 
-                        I am interested in computers, programming,
-                        and web designing. I enjoy learning new
-                        skills and exploring different technologies.
+.home-text h2 {
+    color: #62434C;
+    font-size: 24px;
+    margin-bottom: 15px;
+}
 
-                        My dream is to become a successful
-                        software developer and work in Japan
-                        someday.
-                    </p>
-                </div>
+.home-text p {
+    color: #62434C;
+    font-size: 16px;
+    line-height: 1.8;
+    margin-bottom: 25px;
+}
 
-            </div>
-        </section>
+.button {
+    display: inline-block;
+    background: #D99A9C;
+    color: #40252B;
+    padding: 12px 25px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
 
-        <section id="skills">
-            <div class="container">
+.button:hover {
+    background: #702D45;
+    color: #FFF0F4;
+}
 
-                <h1 class="title">MY <span>SKILLS</span></h1>
+.hero {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    padding: 8px;
+    background: linear-gradient(135deg, #D99A9C, #702D45, #E8B5B8);
+    box-shadow: 0 0 20px rgba(217, 154, 156, 0.6);
+    animation: softGlow 3s infinite alternate;
+    transition: 0.4s ease;
+}
 
-                <div class="skills">
+.hero:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 35px #D99A9C;
+}
 
-                    <div class="box">
-                        <h2>HTML</h2>
-                        <p>Creating basic website structures.</p>
-                    </div>
+.hero img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #FFF0F4;
+}
 
-                    <div class="box">
-                        <h2>CSS</h2>
-                        <p>Designing and styling web pages.</p>
-                    </div>
+@keyframes softGlow {
+    from {
+        box-shadow: 0 0 15px rgba(217, 154, 156, 0.4);
+    }
 
-                    <div class="box">
-                        <h2>JAVA</h2>
-                        <p>Learning programming and problem solving.</p>
-                    </div>
+    to {
+        box-shadow: 0 0 30px rgba(112, 45, 69, 0.5);
+    }
+}
 
-                    <div class="box">
-                    <h2>2D ANIMATION</h2>
-                    <p>Creating 2D drawings and exploring animation techniques.</p>
-                    </div>
+.title {
+    text-align: center;
+    color: #702D45;
+    font-size: 35px;
+    margin-bottom: 50px;
+}
 
-                </div>
-            </div>
-        </section>
+.title span {
+    color: #A6536B;
+}
 
+.title::after {
+    content: "";
+    display: block;
+    width: 70px;
+    height: 4px;
+    background: #D99A9C;
+    margin: 12px auto 0;
+    border-radius: 10px;
+}
 
-        <section id="projects">
-        <h1 class="title"><span>PROJECTS</span></h1>
-        <div class="projects">
+#about {
+    background: #FFF0F4;
+}
 
-        <div class="box">
-            <h2>lips from different angles</h2>
-            <img src="img/lips.png" alt="2d Animation">
-            <p>This artwork shows the different shapes and views of the lips. It demonstrates my drawing skills, attention to detail, and understanding of facial features.</p>
-        </div>
+.about {
+    max-width: 850px;
+    margin: auto;
+    padding: 35px;
+    background: #FFFFFF;
+    border-radius: 20px;
+    border-left: 6px solid #D99A9C;
+    box-shadow: 0 5px 20px rgba(112, 45, 69, 0.1);
+}
 
-        <div class="box">
-            <h2>Three point perspective</h2>
-            <img src="img/three.png" alt="2d Animation">
-            <p>This artwork demonstrates the use of three-point perspective in drawing. It shows how objects can appear more realistic through perspective, depth, and different viewing angles.</p>
-        </div>
+.about p {
+    color: #62434C;
+    font-size: 16px;
+    line-height: 1.9;
+    text-align: justify;
+}
 
-        <div class="box">
-            <h2>Nose from different angles</h2>
-            <img src="img/Nose.jpg" alt="2d Animation">
-            <p>This artwork presents the nose from different viewpoints. It helps develop my understanding of facial structure, proportions, shading, and drawing techniques.</p>
-        </div>
+#skills {
+    background: linear-gradient(135deg, #F8DDE5, #FFF0F4);
+}
 
-        </div>
-        </section>
+.skills {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+}
 
+.skills .box {
+    position: relative;
+    overflow: hidden;
+    background: #FFFFFF;
+    padding: 30px 25px;
+    border-radius: 18px;
+    text-align: center;
+    border-bottom: 5px solid #D99A9C;
+    box-shadow: 0 5px 18px rgba(112, 45, 69, 0.1);
+    transition: all 0.4s ease;
+    cursor: pointer;
+}
 
-<section id="contact">
-    <h1 class="title"><span>CONTACT ME</span></h1>
+.skills .box::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 5px;
+    background: #702D45;
+    transition: width 0.4s ease;
+}
 
-    <div class="contact">
+.skills .box:hover {
+    transform: translateY(-12px) scale(1.04);
+    box-shadow: 0 18px 35px rgba(112, 45, 69, 0.25);
+    border-bottom-color: #702D45;
+    background: linear-gradient(145deg, #FFFFFF, #FCE8EE);
+}
 
-        <div class="contact-info">
-            <h3>📧 EMAIL</h3>
-            <a href="mailto:YOUR_EMAIL@gmail.com">
-                jiceaustero@gmail.com
-            </a>
-        </div>
+.skills .box:hover::before {
+    width: 100%;
+}
 
-        <div class="contact-info">
-            <h3>📱 PHONE</h3>
-            <a href="tel:+63XXXXXXXXXX">
-                09197468615
-            </a>
-        </div>
+.skills .box h2 {
+    color: #702D45;
+    margin-bottom: 12px;
+    transition: all 0.3s ease;
+}
 
-        <div class="contact-buttons">
+.skills .box:hover h2 {
+    color: #D17891;
+    transform: scale(1.08);
+}
 
-            <a class="email-btn"
-               href="https://mail.google.com/mail/?view=cm&fs=1&to=YOUR_EMAIL@gmail.com"
-               target="jiceaustero@gmail.com">
-                EMAIL ME 
-            </a>
+.skills .box p {
+    color: #62434C;
+    line-height: 1.7;
+    transition: color 0.3s ease;
+}
 
-            <a href="https://www.facebook.com/YOUR_USERNAME"
-               target="https://www.facebook.com/share/1DuHHuYSFy/">
-                FACEBOOK 
-            </a>
+.skills .box:hover p {
+    color: #702D45;
+}
 
-            <a href="https://m.me/YOUR_USERNAME"
-               target="https://m.me/alshane.chavez.austero">
-                MESSAGE ME 💬
-            </a>
+@media (max-width: 900px) {
+    .skills {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
 
-            <a href="#home">
-                BACK TO TOP ↑
-            </a>
+@media (max-width: 550px) {
+    .skills {
+        grid-template-columns: 1fr;
+    }
+}
 
-        </div>
-    </div>
-</section>
+#projects {
+    background: #FFF0F4;
+    padding: 100px 7%;
+}
 
+#projects .title {
+    text-align: center;
+    color: #702D45;
+    font-size: 35px;
+    margin-bottom: 50px;
+}
 
-        <footer>
-    <div class="footer-content">
+#projects .title span {
+    color: #A6536B;
+}
 
-        <p class="copyright">
-            © 2026 JICE ALSHANE C. AUSTERO
-        </p>
+.projects {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    max-width: 1100px;
+    margin: auto;
+}
 
-        <p>
-            DIPLOMA IN SOFTWARE ENGINEERING TECHNOLOGY
-        </p>
+.projects .box {
+    position: relative;
+    overflow: hidden;
+    background: #FFFFFF;
+    padding: 25px;
+    border-radius: 20px;
+    text-align: center;
+    border-bottom: 5px solid #D99A9C;
+    box-shadow: 0 5px 20px rgba(112, 45, 69, 0.12);
+    transition: all 0.4s ease;
+}
 
-        <p>
-            HTML / CSS / JAVA
-        </p>
+.projects .box::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 5px;
+    background: #702D45;
+    transition: width 0.4s ease;
+}
 
-    </div>
-</footer>
+.projects .box:hover {
+    transform: translateY(-12px);
+    background: linear-gradient(145deg, #FFFFFF, #FCE8EE);
+    box-shadow: 0 18px 35px rgba(112, 45, 69, 0.25);
+    border-bottom-color: #702D45;
+}
 
+.projects .box:hover::before {
+    width: 100%;
+}
 
+.projects .box h2 {
+    color: #702D45;
+    font-size: 20px;
+    margin-bottom: 20px;
+    min-height: 48px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.4s ease;
+}
 
-        <script>
-            const burger=document.getElementById('burger');
-            const menu=document.getElementById('menu');
+.projects .box:hover h2 {
+    color: #A6536B;
+    transform: scale(1.05);
+}
 
-            burger.onclick=function(){
-                menu.classList.toggle('open');
-            }
+.projects .box img {
+    width: 100%;
+    height: 230px;
+    object-fit: contain;
+    background: #FFF0F4;
+    border-radius: 15px;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 2px solid #F8DDE5;
+    transition: all 0.5s ease;
+}
 
-            menu.onclick=function(){
-                menu.classList.remove('open');
-            }
-        </script>
+.projects .box:hover img {
+    transform: scale(1.06);
+    border-color: #D99A9C;
+    box-shadow: 0 8px 20px rgba(112, 45, 69, 0.15);
+}
 
-    </body>
-</html>
+.projects .box p {
+    color: #62434C;
+    font-size: 14px;
+    line-height: 1.8;
+    transition: color 0.4s ease;
+}
+
+.projects .box:hover p {
+    color: #702D45;
+}
+
+#contact {
+    padding: 70px 0 90px;
+}
+
+.contact {
+    width: 85%;
+    max-width: 850px;
+    margin: auto;
+}
+
+.contact-info {
+    border: 2px solid #E8B5B8;
+    border-radius: 18px;
+    padding: 22px 30px;
+    margin-bottom: 20px;
+}
+
+.contact-info h3 {
+    color: #A6536B;
+    font-size: 15px;
+    letter-spacing: 2px;
+    margin-bottom: 12px;
+}
+
+.contact-info a {
+    color: #702D45;
+    font-size: 23px;
+    font-weight: bold;
+    text-decoration: none;
+    overflow-wrap: anywhere;
+}
+
+.contact-info a:hover {
+    color: #D99A9C;
+}
+
+.contact-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 30px;
+}
+
+.contact-buttons a {
+    display: inline-block;
+    padding: 15px 22px;
+    border: 2px solid #E8B5B8;
+    border-radius: 10px;
+    color: #702D45;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.contact-buttons .email-btn {
+    background: #702D45;
+    color: white;
+    border-color: #702D45;
+}
+
+.contact-buttons a:hover {
+    background: #702D45;
+    border-color: #702D45;
+    color: #FFF0F4;
+    transform: translateY(-3px);
+}
+
+@media (max-width: 600px) {
+    .contact {
+        width: 90%;
+    }
+
+    .contact-info {
+        padding: 20px;
+    }
+
+    .contact-info a {
+        font-size: 18px;
+    }
+
+    .contact-buttons a {
+        padding: 13px 18px;
+        font-size: 13px;
+    }
+}
+
+footer {
+    width: 100%;
+    background: #702D45;
+    color: #FFF0F4;
+    text-align: center;
+    padding: 25px 15px;
+}
+
+footer p {
+    font-size: 14px;
+}
+
+@media (max-width: 1000px) {
+    .skills {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .projects {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .home-text h1 {
+        font-size: 36px;
+    }
+}
+
+@media (max-width: 767px) {
+    header {
+        padding: 12px 5%;
+    }
+
+    .logo img {
+        width: 48px;
+        height: 48px;
+    }
+
+    .burger {
+        display: block;
+    }
+
+    .menu {
+        position: absolute;
+        top: 75px;
+        left: 0;
+        width: 100%;
+        background: #702D45;
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        gap: 25px;
+        padding: 30px 0;
+    }
+
+    .menu.open {
+        display: flex;
+    }
+
+    #home {
+        padding: 120px 7% 60px;
+    }
+
+    .home {
+        flex-direction: column-reverse;
+        text-align: center;
+        gap: 35px;
+    }
+
+    .home-text h1 {
+        font-size: 30px;
+    }
+
+    .home-text h2 {
+        font-size: 20px;
+    }
+
+    .hero {
+        width: 230px;
+        height: 230px;
+    }
+
+    section {
+        padding: 75px 7%;
+    }
+
+    .title,
+    #projects .title {
+        font-size: 28px;
+        margin-bottom: 35px;
+    }
+
+    .about {
+        padding: 25px;
+    }
+
+    .skills {
+        grid-template-columns: 1fr;
+    }
+
+    .projects {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .projects .box img {
+        height: 220px;
+    }
+
+    .contact {
+        padding: 25px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    * {
+        scroll-behavior: auto;
+        animation: none !important;
+        transition: none !important;
+    }
+}
+```
