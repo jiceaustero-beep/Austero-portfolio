@@ -303,23 +303,23 @@ header {
     }
 }
 
-#services {
+#projects {
     background: #FFF0F4;
     padding: 100px 7%;
 }
 
-#services .title {
+#projects .title {
     text-align: center;
     color: #702D45;
     font-size: 35px;
     margin-bottom: 50px;
 }
 
-#services .title span {
+#projects .title span {
     color: #A6536B;
 }
 
-.services {
+.projects {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 30px;
@@ -327,7 +327,7 @@ header {
     margin: auto;
 }
 
-.services .box {
+.projects .box {
     position: relative;
     overflow: hidden;
     background: #FFFFFF;
@@ -339,7 +339,7 @@ header {
     transition: all 0.4s ease;
 }
 
-.services .box::before {
+.projects .box::before {
     content: "";
     position: absolute;
     top: 0;
@@ -350,18 +350,18 @@ header {
     transition: width 0.4s ease;
 }
 
-.services .box:hover {
+.projects .box:hover {
     transform: translateY(-12px);
     background: linear-gradient(145deg, #FFFFFF, #FCE8EE);
     box-shadow: 0 18px 35px rgba(112, 45, 69, 0.25);
     border-bottom-color: #702D45;
 }
 
-.services .box:hover::before {
+.projects .box:hover::before {
     width: 100%;
 }
 
-.services .box h2 {
+.projects .box h2 {
     color: #702D45;
     font-size: 20px;
     margin-bottom: 20px;
@@ -372,12 +372,12 @@ header {
     transition: all 0.4s ease;
 }
 
-.services .box:hover h2 {
+.projects .box:hover h2 {
     color: #A6536B;
     transform: scale(1.05);
 }
 
-.services .box img {
+.projects .box img {
     width: 100%;
     height: 230px;
     object-fit: contain;
@@ -389,20 +389,20 @@ header {
     transition: all 0.5s ease;
 }
 
-.services .box:hover img {
+.projects .box:hover img {
     transform: scale(1.06);
     border-color: #D99A9C;
     box-shadow: 0 8px 20px rgba(112, 45, 69, 0.15);
 }
 
-.services .box p {
+.projects .box p {
     color: #62434C;
     font-size: 14px;
     line-height: 1.8;
     transition: color 0.4s ease;
 }
 
-.services .box:hover p {
+.projects .box:hover p {
     color: #702D45;
 }
 
