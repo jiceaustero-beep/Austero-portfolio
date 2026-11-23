@@ -510,7 +510,7 @@ footer p {
         grid-template-columns: repeat(2, 1fr);
     }
 
-    .services {
+    .projects {
         grid-template-columns: repeat(2, 1fr);
     }
 
@@ -578,7 +578,7 @@ footer p {
     }
 
     .title,
-    #services .title {
+    #projects .title {
         font-size: 28px;
         margin-bottom: 35px;
     }
@@ -591,12 +591,12 @@ footer p {
         grid-template-columns: 1fr;
     }
 
-    .services {
+    .projects {
         grid-template-columns: 1fr;
         gap: 25px;
     }
 
-    .services .box img {
+    .projects .box img {
         height: 220px;
     }
 
