@@ -1,4 +1,4 @@
-```css
+
 * {
     margin: 0;
     padding: 0;
@@ -137,4 +137,478 @@ header {
     display: inline-block;
     background: #D99A9C;
     color: #40252B;
-    padding: 12px 25px
+    padding: 12px 25px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.button:hover {
+    background: #702D45;
+    color: #FFF0F4;
+}
+
+.hero {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    padding: 8px;
+    background: linear-gradient(135deg, #D99A9C, #702D45, #E8B5B8);
+    box-shadow: 0 0 20px rgba(217, 154, 156, 0.6);
+    animation: softGlow 3s infinite alternate;
+    transition: 0.4s ease;
+}
+
+.hero:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 35px #D99A9C;
+}
+
+.hero img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #FFF0F4;
+}
+
+@keyframes softGlow {
+    from {
+        box-shadow: 0 0 15px rgba(217, 154, 156, 0.4);
+    }
+
+    to {
+        box-shadow: 0 0 30px rgba(112, 45, 69, 0.5);
+    }
+}
+
+.title {
+    text-align: center;
+    color: #702D45;
+    font-size: 35px;
+    margin-bottom: 50px;
+}
+
+.title span {
+    color: #A6536B;
+}
+
+.title::after {
+    content: "";
+    display: block;
+    width: 70px;
+    height: 4px;
+    background: #D99A9C;
+    margin: 12px auto 0;
+    border-radius: 10px;
+}
+
+#about {
+    background: #FFF0F4;
+}
+
+.about {
+    max-width: 850px;
+    margin: auto;
+    padding: 35px;
+    background: #FFFFFF;
+    border-radius: 20px;
+    border-left: 6px solid #D99A9C;
+    box-shadow: 0 5px 20px rgba(112, 45, 69, 0.1);
+}
+
+.about p {
+    color: #62434C;
+    font-size: 16px;
+    line-height: 1.9;
+    text-align: justify;
+}
+
+#skills {
+    background: linear-gradient(135deg, #F8DDE5, #FFF0F4);
+}
+
+.skills {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+}
+
+.skills .box {
+    position: relative;
+    overflow: hidden;
+    background: #FFFFFF;
+    padding: 30px 25px;
+    border-radius: 18px;
+    text-align: center;
+    border-bottom: 5px solid #D99A9C;
+    box-shadow: 0 5px 18px rgba(112, 45, 69, 0.1);
+    transition: all 0.4s ease;
+    cursor: pointer;
+}
+
+.skills .box::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 5px;
+    background: #702D45;
+    transition: width 0.4s ease;
+}
+
+.skills .box:hover {
+    transform: translateY(-12px) scale(1.04);
+    box-shadow: 0 18px 35px rgba(112, 45, 69, 0.25);
+    border-bottom-color: #702D45;
+    background: linear-gradient(145deg, #FFFFFF, #FCE8EE);
+}
+
+.skills .box:hover::before {
+    width: 100%;
+}
+
+.skills .box h2 {
+    color: #702D45;
+    margin-bottom: 12px;
+    transition: all 0.3s ease;
+}
+
+.skills .box:hover h2 {
+    color: #D17891;
+    transform: scale(1.08);
+}
+
+.skills .box p {
+    color: #62434C;
+    line-height: 1.7;
+    transition: color 0.3s ease;
+}
+
+.skills .box:hover p {
+    color: #702D45;
+}
+
+@media (max-width: 900px) {
+    .skills {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 550px) {
+    .skills {
+        grid-template-columns: 1fr;
+    }
+}
+
+#services {
+    background: #FFF0F4;
+    padding: 100px 7%;
+}
+
+#services .title {
+    text-align: center;
+    color: #702D45;
+    font-size: 35px;
+    margin-bottom: 50px;
+}
+
+#services .title span {
+    color: #A6536B;
+}
+
+.services {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    max-width: 1100px;
+    margin: auto;
+}
+
+.services .box {
+    position: relative;
+    overflow: hidden;
+    background: #FFFFFF;
+    padding: 25px;
+    border-radius: 20px;
+    text-align: center;
+    border-bottom: 5px solid #D99A9C;
+    box-shadow: 0 5px 20px rgba(112, 45, 69, 0.12);
+    transition: all 0.4s ease;
+}
+
+.services .box::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 5px;
+    background: #702D45;
+    transition: width 0.4s ease;
+}
+
+.services .box:hover {
+    transform: translateY(-12px);
+    background: linear-gradient(145deg, #FFFFFF, #FCE8EE);
+    box-shadow: 0 18px 35px rgba(112, 45, 69, 0.25);
+    border-bottom-color: #702D45;
+}
+
+.services .box:hover::before {
+    width: 100%;
+}
+
+.services .box h2 {
+    color: #702D45;
+    font-size: 20px;
+    margin-bottom: 20px;
+    min-height: 48px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.4s ease;
+}
+
+.services .box:hover h2 {
+    color: #A6536B;
+    transform: scale(1.05);
+}
+
+.services .box img {
+    width: 100%;
+    height: 230px;
+    object-fit: contain;
+    background: #FFF0F4;
+    border-radius: 15px;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 2px solid #F8DDE5;
+    transition: all 0.5s ease;
+}
+
+.services .box:hover img {
+    transform: scale(1.06);
+    border-color: #D99A9C;
+    box-shadow: 0 8px 20px rgba(112, 45, 69, 0.15);
+}
+
+.services .box p {
+    color: #62434C;
+    font-size: 14px;
+    line-height: 1.8;
+    transition: color 0.4s ease;
+}
+
+.services .box:hover p {
+    color: #702D45;
+}
+
+#contact {
+    padding: 70px 0 90px;
+}
+
+.contact {
+    width: 85%;
+    max-width: 850px;
+    margin: auto;
+}
+
+.contact-info {
+    border: 2px solid #E8B5B8;
+    border-radius: 18px;
+    padding: 22px 30px;
+    margin-bottom: 20px;
+}
+
+.contact-info h3 {
+    color: #A6536B;
+    font-size: 15px;
+    letter-spacing: 2px;
+    margin-bottom: 12px;
+}
+
+.contact-info a {
+    color: #702D45;
+    font-size: 23px;
+    font-weight: bold;
+    text-decoration: none;
+    overflow-wrap: anywhere;
+}
+
+.contact-info a:hover {
+    color: #D99A9C;
+}
+
+.contact-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 30px;
+}
+
+.contact-buttons a {
+    display: inline-block;
+    padding: 15px 22px;
+    border: 2px solid #E8B5B8;
+    border-radius: 10px;
+    color: #702D45;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.contact-buttons .email-btn {
+    background: #702D45;
+    color: white;
+    border-color: #702D45;
+}
+
+.contact-buttons a:hover {
+    background: #702D45;
+    border-color: #702D45;
+    color: #FFF0F4;
+    transform: translateY(-3px);
+}
+
+@media (max-width: 600px) {
+    .contact {
+        width: 90%;
+    }
+
+    .contact-info {
+        padding: 20px;
+    }
+
+    .contact-info a {
+        font-size: 18px;
+    }
+
+    .contact-buttons a {
+        padding: 13px 18px;
+        font-size: 13px;
+    }
+}
+
+footer {
+    width: 100%;
+    background: #702D45;
+    color: #FFF0F4;
+    text-align: center;
+    padding: 25px 15px;
+}
+
+footer p {
+    font-size: 14px;
+}
+
+@media (max-width: 1000px) {
+    .skills {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .services {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .home-text h1 {
+        font-size: 36px;
+    }
+}
+
+@media (max-width: 767px) {
+    header {
+        padding: 12px 5%;
+    }
+
+    .logo img {
+        width: 48px;
+        height: 48px;
+    }
+
+    .burger {
+        display: block;
+    }
+
+    .menu {
+        position: absolute;
+        top: 75px;
+        left: 0;
+        width: 100%;
+        background: #702D45;
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        gap: 25px;
+        padding: 30px 0;
+    }
+
+    .menu.open {
+        display: flex;
+    }
+
+    #home {
+        padding: 120px 7% 60px;
+    }
+
+    .home {
+        flex-direction: column-reverse;
+        text-align: center;
+        gap: 35px;
+    }
+
+    .home-text h1 {
+        font-size: 30px;
+    }
+
+    .home-text h2 {
+        font-size: 20px;
+    }
+
+    .hero {
+        width: 230px;
+        height: 230px;
+    }
+
+    section {
+        padding: 75px 7%;
+    }
+
+    .title,
+    #services .title {
+        font-size: 28px;
+        margin-bottom: 35px;
+    }
+
+    .about {
+        padding: 25px;
+    }
+
+    .skills {
+        grid-template-columns: 1fr;
+    }
+
+    .services {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .services .box img {
+        height: 220px;
+    }
+
+    .contact {
+        padding: 25px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    * {
+        scroll-behavior: auto;
+        animation: none !important;
+        transition: none !important;
+    }
+}
